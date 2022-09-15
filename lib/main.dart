@@ -6,7 +6,7 @@ import 'package:flame/flame.dart';
 import 'package:flame/game.dart';
 import 'package:flame/components.dart';
 import 'package:flutter/services.dart';
-import 'package:untitled/player.dart';
+import 'package:untitled4/playable%20characters/ship.dart';
 
 import 'movement.dart';
 import 'myGame.dart';

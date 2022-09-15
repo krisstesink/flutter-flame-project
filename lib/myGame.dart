@@ -7,13 +7,14 @@ import 'package:flame/flame.dart';
 import 'package:flame/game.dart';
 import 'package:flame/components.dart';
 import 'package:flutter/services.dart';
-import 'package:untitled/player.dart';
-import 'package:untitled/worldItems.dart';
+import 'package:untitled4/playable%20characters/player.dart';
+import 'package:untitled4/playable%20characters/ship.dart';
+import 'package:untitled4/tile.dart';
+import 'package:untitled4/worldItems.dart';
 
 import 'movement.dart';
 
 class MyGame extends FlameGame with HasKeyboardHandlerComponents, HasCollisionDetection, TapDetector {
-  Player player = Player();
 
   @override
   Future<bool> onTapDown(TapDownInfo info) async {
@@ -30,14 +31,7 @@ class MyGame extends FlameGame with HasKeyboardHandlerComponents, HasCollisionDe
 
   @override
   Future<void> onLoad() async {
-    SpriteComponent background = SpriteComponent();
-    background.sprite = await Sprite.load('background0.jpg');
-    background.size = Vector2(8000, 4000);
 
-    add(background);
-    add(player);
-    add(Rock());
-    camera.followComponent(player);
   }
 
 }

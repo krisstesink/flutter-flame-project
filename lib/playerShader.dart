@@ -6,7 +6,7 @@ import 'package:flame/flame.dart';
 import 'package:flame/game.dart';
 import 'package:flame/components.dart';
 import 'package:flutter/services.dart';
-import 'package:untitled/player.dart';
+import 'package:untitled4/playable%20characters/ship.dart';
 
 import 'movement.dart';
 
@@ -24,6 +24,7 @@ class PlayerShader extends SpriteComponent with KeyboardHandler {
       ..sprite = await Sprite.load(asset)
       ..size = Vector2(85, 85)
       ..position = (Vector2(0, -offset*4))
+      ..priority = (offset*2) as int
       ..anchor = Anchor.center;
     add(
       KeyboardListenerComponent(
